@@ -66,5 +66,9 @@ flutter:
         - asset: fonts/RobotoCondensed-Bold.ttf
           weight: 700
 
+    - family: ZCOOLXiaoWei
+      fonts:
+        - asset: fonts/ZCOOLXiaoWei-Regular.ttf
+
        # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

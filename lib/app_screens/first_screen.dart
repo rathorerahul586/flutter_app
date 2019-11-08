@@ -9,19 +9,13 @@ class MyFirstFlatter extends StatelessWidget{
     return Center(
       child: Container(
         alignment: Alignment.center,
-        color: Colors.grey,
-        width: 200.0,
-        height: 200.0,
-        margin: EdgeInsets.all(30),
-        padding: EdgeInsets.only(right: 30),
         child: (
             Text("Hello",
                 style: TextStyle(
                   decoration: TextDecoration.none,
                   color: Colors.white,
-                  fontFamily: 'RobotoCondensed',
-                  fontSize: 40.0,
-                  fontStyle: FontStyle.italic,
+                  fontFamily: "ZCOOLXiaoWei",
+                  fontSize: 60.0,
                   fontWeight: FontWeight.w300
                 ),)
         ),
