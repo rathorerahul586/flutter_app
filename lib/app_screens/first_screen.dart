@@ -13,6 +13,7 @@ class MyFirstFlatter extends StatelessWidget {
                 child: Text(
               "Hello World",
               style: TextStyle(
+                  backgroundColor: Colors.red,
                   decoration: TextDecoration.none,
                   color: Colors.white,
                   fontFamily: "ZCOOLXiaoWei",
@@ -23,6 +24,7 @@ class MyFirstFlatter extends StatelessWidget {
                 child: Text(
               "This is long text",
               style: TextStyle(
+                  backgroundColor: Colors.green,
                   decoration: TextDecoration.none,
                   color: Colors.white,
                   fontFamily: "ZCOOLXiaoWei",
