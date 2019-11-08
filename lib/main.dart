@@ -1,4 +1,15 @@
 import "package:flutter/material.dart";
-import 'app_screens/first_screen.dart';
+import 'package:flutter_app/app_screens/first_screen.dart';
 
-void main() => runApp(new MyFlutterApp());
+
+void main() {
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "Exploring Widgets",
+      home: (
+          MyFirstFlatter()
+      ),
+    )
+  );
+}

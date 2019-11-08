@@ -1,39 +1,31 @@
-import 'dart:math';
+import 'dart:ui' as prefix0;
 
 import "package:flutter/material.dart";
 
-class MyFlutterApp extends StatelessWidget{
-
+class MyFirstFlatter extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "First Flutter",
-      home: Scaffold(
-        appBar: AppBar (
-          title: (Text("Good Rahul")),
-        ),
-        body: Material(
-          color: Colors.green,
-          child: Center (
-            child: Text(
-              "Hello Rahul"+luckyNumber(),
-              textDirection: TextDirection.ltr,
-              style: TextStyle(
-                  color: Colors.white),
-              textAlign: TextAlign.center,
-            ),
-          ),
+    return Center(
+      child: Container(
+        alignment: Alignment.center,
+        color: Colors.grey,
+        width: 200.0,
+        height: 200.0,
+        margin: EdgeInsets.all(30),
+        padding: EdgeInsets.only(right: 30),
+        child: (
+            Text("Hello",
+                style: TextStyle(
+                  decoration: TextDecoration.none,
+                  color: Colors.white,
+                  fontFamily: 'RobotoCondensed',
+                  fontSize: 40.0,
+                  fontStyle: FontStyle.italic,
+                  fontWeight: FontWeight.w300
+                ),)
         ),
       ),
     );
-  }
-
-  String luckyNumber(){
-    var random = Random();
-    int randomNumber = random.nextInt(10);
-
-    return "\nYour Lucky No. is $randomNumber";
   }
 }
