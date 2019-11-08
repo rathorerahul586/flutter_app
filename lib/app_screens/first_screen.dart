@@ -6,7 +6,8 @@ class MyFirstFlatter extends StatelessWidget {
     return Center(
       child: Container(
         alignment: Alignment.center,
-        child: Row(
+        margin: EdgeInsets.only(top: 40.0),
+        child: Column(
           children: <Widget>[
             Expanded(
                 child: Text(
