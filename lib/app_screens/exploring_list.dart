@@ -1,44 +1,31 @@
 import "package:flutter/material.dart";
 
-class ExploringList extends StatelessWidget{
-
-
+class ExploringList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("List View (Manual)"),
-          centerTitle: true,
-        ),
-        body: listItems()
+      appBar: AppBar(
+        title: Text("List View (Manual)"),
+        centerTitle: true,
+      ),
+      body: getListView(),
     );
   }
-}
 
-Widget listItems(){
-  var listView  = ListView(
-    children: <Widget>[
-      ListTile(
-        leading: Icon(Icons.ac_unit),
-        title: Text("B.Tech"),
-        subtitle: Text("All Branches"),
-        trailing: Icon(Icons.check),
-      ),
+  List<String> getListItems() {
+    var item = List<String>.generate(30, (counter) => "Item $counter");
+    return item;
+  }
 
-      ListTile(
-        leading: Icon(Icons.book),
-        title: Text("Management"),
-        subtitle: Text("BBA, MBA"),
-        trailing: Icon(Icons.check),
-      ),
-
-      ListTile(
-        leading: Icon(Icons.local_hospital),
-        title: Text("Pharmacy"),
-        subtitle: Text("B.pharma, M.pharma"),
-        trailing: Icon(Icons.check),
-      )
-    ],
-  );
-  return listView;
+  Widget getListView() {
+    var listItems = getListItems();
+    var listView = ListView.builder(
+        itemCount: listItems.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text(listItems[index]),
+          );
+        });
+    return listView;
+  }
 }
