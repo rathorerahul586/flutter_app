@@ -24,6 +24,9 @@ class ExploringList extends StatelessWidget {
         itemBuilder: (context, index) {
           return ListTile(
             title: Text(listItems[index]),
+            onTap: (){
+              debugPrint('${listItems[index]}');
+            },
           );
         });
     return listView;
