@@ -98,17 +98,16 @@ class TodoListState extends State<TodoList> {
         return new AlertDialog(
           title: new Text('Mark "${_todoItem[index]}" as done?'),
           actions: <Widget>[
-            new FlatButton(
-                onPressed: () => Navigator.of(context).pop(),
-                child: new Text("CANCEL")
-            ),
-            new FlatButton(
-                onPressed: () => {
-                  _removeTodoItem(index),
-                  Navigator.of(context).pop(),
-                },
-                child: new Text("MARK AS DONE"))
-          ]
+            new TextButton(
+                    onPressed: () => Navigator.of(context).pop(),
+                    child: new Text("CANCEL")),
+            new TextButton(
+                    onPressed: () => {
+                          _removeTodoItem(index),
+                          Navigator.of(context).pop(),
+                        },
+                    child: new Text("MARK AS DONE"))
+              ]
 
         ) ;
       }
